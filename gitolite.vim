@@ -1,7 +1,7 @@
 " Vim syntax file
 " Language:	gitolite configuration
 " Maintainer:	Teemu Matilainen <teemu.matilainen@iki.fi>
-" Last Change:	2009-12-26
+" Last Change:	2010-01-06
 
 if exists("b:current_syntax")
   finish
@@ -26,6 +26,9 @@ syn match	gitoliteRefex	"[^=]*" contained
 syn match	gitoliteKeyword		"^\s*config\s\+" nextgroup=gitoliteConfVariable
 syn match	gitoliteConfVariable	"[^=]*" contained
 
+" Include
+syn match	gitoliteInclude		"^\s*include\s"
+
 " String
 syn region	gitoliteString	oneline start=+"+ end=+"+
 
@@ -38,6 +41,7 @@ hi def link gitoliteRepoDef		Type
 hi def link gitoliteKeyword		Keyword
 hi def link gitoliteRefex		String
 hi def link gitoliteConfVariable	Identifier
+hi def link gitoliteInclude		Include
 hi def link gitoliteString		String
 
 let b:current_syntax = "gitolite"
