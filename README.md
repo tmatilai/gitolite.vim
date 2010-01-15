@@ -6,24 +6,26 @@ Description
 
 [Vim][] Syntax highlight for [gitolite][] configuration file `gitolite.conf`.
 
+Released versions can be found in [vim.org script page][script_page].
+
 Installation
 ------------
 
-Create a Vimball:
+Download a released Vimball from [here][script_page], open it in [Vim][] and
+call `:source %s`.
 
+You can also create and/or install the Vimball from the source by calling:
+
+	# create the Vimball
 	make
-
-Install the Vimball (`gitolite.vba.gz`) by opening it in [Vim][] and calling
-`:source %s`, or by using Makefile:
-
+	# create and install it
 	make install-vba
 
-It is also possible to install the files directly:
+Third option is to install the files directly:
 
+	# to $HOME/.vim
 	make install
-
-Or systemwide:
-
+	# or systemwide
 	sudo make vimdir=/etc/vim install
 
 Copyright
@@ -35,3 +37,4 @@ License: [Apache 2](http://www.apache.org/licenses/LICENSE-2.0)
 
 [Vim]: http://www.vim.org/
 [gitolite]: http://github.com/sitaramc/gitolite
+[script_page]: http://www.vim.org/scripts/script.php?script_id=2900
