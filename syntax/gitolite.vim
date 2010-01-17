@@ -1,7 +1,7 @@
 " Vim syntax file
 " Language:	gitolite configuration
 " Maintainer:	Teemu Matilainen <teemu.matilainen@iki.fi>
-" Last Change:	2010-01-06
+" Last Change:	2010-01-17
 
 if exists("b:current_syntax")
   finish
@@ -19,8 +19,9 @@ syn keyword	gitolitePreProc	CREATER CREATOR READERS WRITERS
 syn match	gitoliteRepoDef	"^\s*repo\s"
 
 " Permission
-syn match	gitoliteKeyword	"^\s*\(C\|R\|RW\|RW+\|-\)\s\+" nextgroup=gitoliteRefex
-syn match	gitoliteRefex	"[^=]*" contained
+syn match	gitoliteKeyword		"^\s*\(C\|R\|RW\|RW+\|-\)\s\+" nextgroup=gitoliteRefex
+syn match	gitoliteRefex		"[^=]*" contained contains=gitoliteNameRefex
+syn keyword	gitoliteNameRefex	NAME
 
 " Configuration
 syn match	gitoliteKeyword		"^\s*config\s\+" nextgroup=gitoliteConfVariable
@@ -40,6 +41,7 @@ hi def link gitolitePreProc		PreProc
 hi def link gitoliteRepoDef		Type
 hi def link gitoliteKeyword		Keyword
 hi def link gitoliteRefex		String
+hi def link gitoliteNameRefex		PreProc
 hi def link gitoliteConfVariable	Identifier
 hi def link gitoliteInclude		Include
 hi def link gitoliteString		String
