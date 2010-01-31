@@ -19,7 +19,7 @@ syn match	gitoliteRepoDef		"^\s*repo\s" nextgroup=gitoliteRepoLine
 syn match	gitoliteRepoLine	".*" contained transparent contains=gitoliteGroup,gitoliteWildRepo,gitoliteCreator,gitoliteRepoError,gitoliteComment
 syn match	gitoliteUserLine	".*" contained transparent contains=gitoliteGroup,gitolitePreProc,gitoliteUserError,gitoliteComment
 
-syn match	gitoliteWildRepo	"[^ \t]*[\\^$|()[\]*?{}][^ \t]*" contained contains=gitoliteCreator,gitoliteRepoError
+syn match	gitoliteWildRepo	"[ \t=]\@<=[^ \t]*[\\^$|()[\]*?{}][^ \t]*" contained contains=gitoliteCreator,gitoliteRepoError
 syn match	gitoliteGroup		"[ \t=]\@<=@[^ \t]\+" contained contains=gitoliteUserError
 
 syn keyword	gitoliteCreator		CREATER CREATOR contained
