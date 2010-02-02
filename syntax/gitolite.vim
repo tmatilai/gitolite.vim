@@ -1,7 +1,8 @@
 " Vim syntax file
 " Language:	gitolite configuration
+" URL:		http://github.com/tmatilai/gitolite.vim
 " Maintainer:	Teemu Matilainen <teemu.matilainen@iki.fi>
-" Last Change:	2010-01-18
+" Last Change:	2010-02-02
 
 if exists("b:current_syntax")
   finish
@@ -50,7 +51,7 @@ syn match	gitoliteInclude		"^\s*include\s"
 " String
 syn region	gitoliteString		start=+"+ end=+"+ oneline
 
-" Define the default highlighting.
+" Define the default highlighting
 hi def link gitoliteComment		Comment
 hi def link gitoliteTodo		Todo
 hi def link gitoliteGroupDef		gitoliteGroup
