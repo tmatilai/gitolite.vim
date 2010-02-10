@@ -33,6 +33,6 @@ install:
 	done
 
 dist:
-	git archive --prefix='$(PLUGIN)/' HEAD | gzip -9 > $(PLUGIN).tar.gz
+	git archive --prefix='$(PLUGIN).vim/' HEAD | gzip -9 > $(PLUGIN).vim.tar.gz
 
 .PHONY: all clean install dist
