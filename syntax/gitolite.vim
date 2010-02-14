@@ -2,7 +2,7 @@
 " Language:	gitolite configuration
 " URL:		http://github.com/tmatilai/gitolite.vim
 " Maintainer:	Teemu Matilainen <teemu.matilainen@iki.fi>
-" Last Change:	2010-02-02
+" Last Change:	2010-02-13
 
 if exists("b:current_syntax")
   finish
@@ -36,8 +36,8 @@ syn match	gitoliteUserError	"[^ \t0-9a-zA-Z._@+-]\+" contained
 " Permission
 syn match	gitoliteKeyword		"^\s*\(C\|R\|RW\|RW+\)[ \t=]\@=" nextgroup=gitoliteRefex
 syn match	gitoliteKeyword		"^\s*-[ \t=]\@=" nextgroup=gitoliteDenyRefex
-syn match	gitoliteRefex		"[^=]*="he=e-1 contained contains=gitoliteNameRefex nextgroup=gitoliteUserLine
-syn match	gitoliteDenyRefex	"[^=]*="he=e-1 contained contains=gitoliteNameRefex nextgroup=gitoliteDenyUsers
+syn match	gitoliteRefex		"[^=]*="he=e-1 contained contains=gitoliteNameRefex,gitoliteGroup nextgroup=gitoliteUserLine
+syn match	gitoliteDenyRefex	"[^=]*="he=e-1 contained contains=gitoliteNameRefex,gitoliteGroup nextgroup=gitoliteDenyUsers
 syn match	gitoliteNameRefex	"\sNAME/"he=e-1 contained
 syn match	gitoliteDenyUsers	".*" contained contains=gitoliteUserError,gitoliteComment
 
