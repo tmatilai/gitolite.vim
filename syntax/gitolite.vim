@@ -13,7 +13,7 @@ syn match	gitoliteComment		"\(^\|\s\)#.*" contains=gitoliteTodo
 syn keyword	gitoliteTodo		TODO FIXME XXX NOT contained
 
 " Groups, users and repos
-syn match	gitoliteGroupDef	"^\s*@[^ \t=]\+\(\s*=\)\@=" contains=gitoliteUserError nextgroup=gitoliteGroupDefSep
+syn match	gitoliteGroupDef	"^\(\s*\)\@<=@[^=]\{-1,}\(\s*=\)\@=" contains=gitoliteSpaceError,gitoliteUserError nextgroup=gitoliteGroupDefSep
 syn match	gitoliteGroupDefSep	"\s*=" contained nextgroup=gitoliteRepoLine
 syn match	gitoliteRepoDef		"^\s*repo\s" nextgroup=gitoliteRepoLine
 
@@ -32,6 +32,7 @@ syn match	gitoliteExtCmd		"rsync\(\s\|$\)" contained
 " Illegal characters
 syn match	gitoliteRepoError	"[^ \t0-9a-zA-Z._@+/\\^$|()[\]*?{}-]\+" contained
 syn match	gitoliteUserError	"[^ \t0-9a-zA-Z._@+-]\+" contained
+syn match	gitoliteSpaceError	"\s\+" contained
 
 " Permission
 syn match	gitoliteKeyword		"^\s*\(C\|R\|RW\|RW+\)[ \t=]\@=" nextgroup=gitoliteRefex
@@ -59,6 +60,7 @@ hi def link gitoliteGroup		Identifier
 hi def link gitoliteWildRepo		Special
 hi def link gitoliteRepoError		gitoliteError
 hi def link gitoliteUserError		gitoliteError
+hi def link gitoliteSpaceError		gitoliteError
 hi def link gitoliteError		Error
 hi def link gitoliteCreator		gitolitePreProc
 hi def link gitolitePreProc		PreProc
