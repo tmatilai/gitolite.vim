@@ -2,7 +2,7 @@
 " Language:	gitolite configuration
 " URL:		http://github.com/tmatilai/gitolite.vim
 " Maintainer:	Teemu Matilainen <teemu.matilainen@iki.fi>
-" Last Change:	2010-02-13
+" Last Change:	2010-03-16
 
 if exists("b:current_syntax")
   finish
@@ -36,9 +36,10 @@ syn match	gitoliteUserError	"[^ \t0-9a-zA-Z._@+-]\+" contained
 " Permission
 syn match	gitoliteKeyword		"^\s*\(C\|R\|RW\|RW+\)[ \t=]\@=" nextgroup=gitoliteRefex
 syn match	gitoliteKeyword		"^\s*-[ \t=]\@=" nextgroup=gitoliteDenyRefex
-syn match	gitoliteRefex		"[^=]*="he=e-1 contained contains=gitoliteNameRefex,gitoliteGroup nextgroup=gitoliteUserLine
-syn match	gitoliteDenyRefex	"[^=]*="he=e-1 contained contains=gitoliteNameRefex,gitoliteGroup nextgroup=gitoliteDenyUsers
-syn match	gitoliteNameRefex	"\sNAME/"he=e-1 contained
+syn match	gitoliteRefex		"[^=]*="he=e-1 contained contains=gitoliteSpecialRefex,gitoliteGroup nextgroup=gitoliteUserLine
+syn match	gitoliteDenyRefex	"[^=]*="he=e-1 contained contains=gitoliteSpecialRefex,gitoliteGroup nextgroup=gitoliteDenyUsers
+syn match	gitoliteSpecialRefex	"\sNAME/"he=e-1 contained
+syn match	gitoliteSpecialRefex	"/USER/"hs=s+1,he=e-1 contained
 syn match	gitoliteDenyUsers	".*" contained contains=gitoliteUserError,gitoliteComment
 
 " Configuration
@@ -68,7 +69,7 @@ hi def link gitoliteRepoDef		Type
 hi def link gitoliteKeyword		Keyword
 hi def link gitoliteRefex		String
 hi def link gitoliteDenyRefex		gitoliteRefex
-hi def link gitoliteNameRefex		PreProc
+hi def link gitoliteSpecialRefex	PreProc
 hi def link gitoliteDenyUsers		WarningMsg
 hi def link gitoliteConfVariable	Identifier
 hi def link gitoliteInclude		Include
