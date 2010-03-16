@@ -13,7 +13,7 @@ syn match	gitoliteComment		"\(^\|\s\)#.*" contains=gitoliteTodo
 syn keyword	gitoliteTodo		TODO FIXME XXX NOT contained
 
 " Groups, users and repos
-syn match	gitoliteGroupDef	"^\(\s*\)\@<=@[^=]\{-1,}\(\s*=\)\@=" contains=gitoliteSpaceError,gitoliteUserError nextgroup=gitoliteGroupDefSep
+syn match	gitoliteGroupDef	"\(^\s*\)\@<=@[^=]\{-1,}\(\s*=\)\@=" contains=gitoliteSpaceError,gitoliteUserError nextgroup=gitoliteGroupDefSep
 syn match	gitoliteGroupDefSep	"\s*=" contained nextgroup=gitoliteRepoLine
 syn match	gitoliteRepoDef		"^\s*repo\s" nextgroup=gitoliteRepoLine
 
