@@ -2,7 +2,7 @@
 " Language:	gitolite configuration
 " URL:		http://github.com/tmatilai/gitolite.vim
 " Maintainer:	Teemu Matilainen <teemu.matilainen@iki.fi>
-" Last Change:	2010-02-13
+" Last Change:	2010-03-16
 
 if exists("b:current_syntax")
   finish
@@ -13,8 +13,8 @@ syn match	gitoliteComment		"\(^\|\s\)#.*" contains=gitoliteTodo
 syn keyword	gitoliteTodo		TODO FIXME XXX NOT contained
 
 " Groups, users and repos
-syn match	gitoliteGroupDef	"^\s*@[^ \t=]\+\(\s*=\)\@=" contains=gitoliteUserError nextgroup=gitolineGroupDefSep
-syn match	gitolineGroupDefSep	"\s*=" contained nextgroup=gitoliteRepoLine
+syn match	gitoliteGroupDef	"^\s*@[^ \t=]\+\(\s*=\)\@=" contains=gitoliteUserError nextgroup=gitoliteGroupDefSep
+syn match	gitoliteGroupDefSep	"\s*=" contained nextgroup=gitoliteRepoLine
 syn match	gitoliteRepoDef		"^\s*repo\s" nextgroup=gitoliteRepoLine
 
 syn match	gitoliteRepoLine	".*" contained transparent contains=gitoliteGroup,gitoliteWildRepo,gitoliteCreator,gitoliteExtCmdHelper,gitoliteRepoError,gitoliteComment
