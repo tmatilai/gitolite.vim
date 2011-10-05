@@ -31,11 +31,11 @@ Third option is to install the files directly:
 Copyright
 ---------
 
-Copyright (c) 2010 Teemu Matilainen <teemu.matilainen@iki.fi>
+Copyright (c) 2010-2011 Teemu Matilainen <teemu.matilainen@iki.fi>
 
 License: [Apache 2](http://www.apache.org/licenses/LICENSE-2.0)
 
 [Vim]: http://www.vim.org/
-[gitolite]: http://github.com/sitaramc/gitolite
+[gitolite]: https://github.com/sitaramc/gitolite
 [script_page]: http://www.vim.org/scripts/script.php?script_id=2900
-[github_downloads]: http://github.com/tmatilai/gitolite.vim/downloads
+[github_downloads]: https://github.com/tmatilai/gitolite.vim/downloads
