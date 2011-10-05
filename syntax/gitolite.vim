@@ -48,7 +48,7 @@ syn match	gitoliteKeyword		"^\s*config\s\+" nextgroup=gitoliteConfVariable
 syn match	gitoliteConfVariable	"[^=]*" contained
 
 " Include
-syn match	gitoliteInclude		"^\s*include\s"
+syn match	gitoliteInclude		"^\s*\(include\|subconf\)\s"
 
 " String
 syn region	gitoliteString		start=+"+ end=+"+ oneline
