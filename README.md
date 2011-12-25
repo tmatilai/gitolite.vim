@@ -44,10 +44,11 @@ Copyright
 
 Copyright (c) 2010-2011 Teemu Matilainen <teemu.matilainen@iki.fi>
 
-License: [Apache 2](http://www.apache.org/licenses/LICENSE-2.0)
+License: [Same as Vim][vim_license] or [Apache 2](http://www.apache.org/licenses/LICENSE-2.0)
 
 [Vim]: http://www.vim.org/
 [gitolite]: https://github.com/sitaramc/gitolite
 [script_page]: http://www.vim.org/scripts/script.php?script_id=2900
 [github_downloads]: https://github.com/tmatilai/gitolite.vim/downloads
 [pathogen.vim]: https://github.com/tpope/vim-pathogen
+[vim_license]: http://vimdoc.sourceforge.net/htmldoc/uganda.html#license
