@@ -22,8 +22,7 @@ want the latest version, you have many options.
         git clone git://github.com/tmatilai/gitolite.vim.git
 
 2.  Download a released Vimball (`gitolite.vba.gz`) from
-    [github][github_downloads] or [vim.org script page][script_page], open it
-    in Vim and call `:source %s`.
+    [vim.org script page][script_page], open it in Vim and call `:source %s`.
 
 3.  You can also create and/or install the Vimball from the source by calling:
 
@@ -49,6 +48,5 @@ License: [Same as Vim][vim_license] or [Apache 2](http://www.apache.org/licenses
 [Vim]: http://www.vim.org/
 [gitolite]: https://github.com/sitaramc/gitolite
 [script_page]: http://www.vim.org/scripts/script.php?script_id=2900
-[github_downloads]: https://github.com/tmatilai/gitolite.vim/downloads
 [pathogen.vim]: https://github.com/tpope/vim-pathogen
 [vim_license]: http://vimdoc.sourceforge.net/htmldoc/uganda.html#license
