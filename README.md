@@ -16,32 +16,38 @@ want the latest version, you have many options.
 1.  Pathogen
 
     The recommended method is to install [pathogen.vim][], and then clone
-    gitolite.vim repository (or copy the content) under `~/.vim/bundle`:
+    gitolite.vim repository (or copy the content) under _~/.vim/bundle/_:
 
-        cd ~/.vim/bundle
-        git clone git://github.com/tmatilai/gitolite.vim.git
+    ```sh
+    cd ~/.vim/bundle
+    git clone git://github.com/tmatilai/gitolite.vim.git
+    ```
 
-2.  Download a released Vimball (`gitolite.vba.gz`) from
+2.  Download a released package ("Vimball", _gitolite.vba.gz_) from
     [vim.org script page][script_page], open it in Vim and call `:source %s`.
 
 3.  You can also create and/or install the Vimball from the source by calling:
 
-        # create the Vimball
-        make
-        # create and install it
-        make install-vba
+    ```sh
+    # create the Vimball
+    make
+    # create and install it
+    make install-vba
+    ```
 
-4. Yet another option is to install the files directly:
+4.  Yet another option is to install the files directly:
 
-        # to $HOME/.vim
-        make install
-        # or systemwide
-        sudo make vimdir=/etc/vim install
+    ```sh
+    # to $HOME/.vim
+    make install
+    # or systemwide
+    sudo make vimdir=/etc/vim install
+    ```
 
 Copyright
 ---------
 
-Copyright (c) 2010-2011 Teemu Matilainen <teemu.matilainen@iki.fi>
+Copyright © 2010-2011 Teemu Matilainen <<teemu.matilainen@iki.fi>>
 
 License: [Same as Vim][vim_license] or [Apache 2](http://www.apache.org/licenses/LICENSE-2.0)
 
